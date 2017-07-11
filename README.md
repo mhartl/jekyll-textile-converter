@@ -1,8 +1,8 @@
 # Jekyll::Latex::Converter
 
-Convert your `.latex` Jekyll content. For Jekyll 3.0 and up.
+Use LaTeX with Jekyll.
 
-[![Build Status](https://travis-ci.org/jekyll/jekyll-latex-converter.svg?branch=master)](https://travis-ci.org/jekyll/jekyll-latex-converter)
+Supports all LaTeX syntax supported by [PolyTeXnic](https://github.com/softcover/polytexnic). For Jekyll 3.0 and up.
 
 ## Installation
 
@@ -27,21 +27,18 @@ Lastly, add it to your `_config.yml` file:
 
 ## Usage
 
-Plop in a file with YAML front matter and watch Jekyll gobble it up and spit out beautiful HTML.
+Create files with the `.tex` extension in the `_posts` directory, as in
 
-If you'd like to use a file extension other than `.latex`, you may
-specify a comma-separated list of extensions in your `_config.yml`, like this:
+`_posts/2017-07-12-test-post.tex`:
 
-    latex_ext: "latex,txtl,tl"
+```
+---
+layout: post
+title:  "Welcome to Jekyll 3"
+categories: jekyll update
+published: true
+---
 
-If that is the given configuration, then all files with `.latex`,
-`.txtl`, and `.tl` file extensions will be read in and interpreted as
-Latex. They must still contain YAML front matter.
 
-## Contributing
-
-1. Fork it ( https://github.com/jekyll/jekyll-latex-converter/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+This is a \emph{LaTeX} file.
+```
