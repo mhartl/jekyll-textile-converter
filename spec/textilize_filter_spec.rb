@@ -13,7 +13,7 @@ RSpec.describe(Jekyll::Filters) do
 
   let(:filter) { JekyllFilter.new }
 
-  it "should convert textile" do
+  it "should convert latex" do
     expect(filter.textilize("something *really* simple")).to eq("<p>something <strong>really</strong> simple</p>")
   end
 end

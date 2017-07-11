@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-RSpec.describe(Jekyll::Converters::Textile) do
+RSpec.describe(Jekyll::Converters::Latex) do
   let(:configs)   { Hash.new }
   let(:converter) { described_class.new(configs) }
 
@@ -54,28 +54,28 @@ RSpec.describe(Jekyll::Converters::Textile) do
       end
     end
 
-    context "`textile_ext`" do
+    context "`latex_ext`" do
       context "with a custom list including the default" do
-        let(:configs) { {'textile_ext' => 'textile,text'} }
+        let(:configs) { {'latex_ext' => 'latex,text'} }
 
         it "matches the new ext" do
           expect(converter.matches('.text')).to be_truthy
         end
 
         it "matches the old ext" do
-          expect(converter.matches('.textile')).to be_truthy
+          expect(converter.matches('.latex')).to be_truthy
         end
       end
 
       context "with a replacement ext" do
-        let(:configs) { {'textile_ext' => 'text'} }
+        let(:configs) { {'latex_ext' => 'text'} }
 
         it "matches the new ext" do
           expect(converter.matches('.text')).to be_truthy
         end
 
         it "doesn't match the old ext" do
-          expect(converter.matches('.textile')).to be_falsy
+          expect(converter.matches('.latex')).to be_falsy
         end
       end
     end

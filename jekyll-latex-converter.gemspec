@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jekyll-textile-converter/version'
+require 'jekyll-latex-converter/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-textile-converter"
-  spec.version       = Jekyll::TextileConverter::VERSION
+  spec.name          = "jekyll-latex-converter"
+  spec.version       = Jekyll::LatexConverter::VERSION
   spec.authors       = ["Parker Moore"]
   spec.email         = ["parkrmoore@gmail.com"]
-  spec.summary       = %q{Textile converter for Jekyll.}
-  spec.homepage      = "https://github.com/jekyll/jekyll-textile-converter"
+  spec.summary       = %q{Latex converter for Jekyll.}
+  spec.homepage      = "https://github.com/jekyll/jekyll-latex-converter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

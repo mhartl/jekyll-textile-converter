@@ -1,13 +1,13 @@
 module Jekyll
   module Converters
-    class Textile < Converter
+    class Latex < Converter
       safe true
 
-      highlighter_prefix '<notextile>'
-      highlighter_suffix '</notextile>'
+      highlighter_prefix '<nolatex>'
+      highlighter_suffix '</nolatex>'
 
       DEFAULT_CONFIGURATION = {
-        'textile_ext' => 'textile',
+        'latex_ext' => 'latex',
         'redcloth' => {
           'hard_breaks' => true
         }
@@ -23,13 +23,13 @@ module Jekyll
         require 'redcloth'
         @setup = true
       rescue LoadError
-        STDERR.puts 'You are missing a library required for Textile. Please run:'
+        STDERR.puts 'You are missing a library required for Latex. Please run:'
         STDERR.puts '  $ [sudo] gem install RedCloth'
         raise Errors::FatalException.new("Missing dependency: RedCloth")
       end
 
       def extname_list
-        @extname_list ||= @config['textile_ext'].split(',').map { |e| ".#{e}" }
+        @extname_list ||= @config['latex_ext'].split(',').map { |e| ".#{e}" }
       end
 
       def matches(ext)
@@ -47,7 +47,7 @@ module Jekyll
         return RedCloth.new(content).to_html if @config['redcloth'].nil?
 
         # List of attributes defined on RedCloth
-        # (from https://github.com/jgarber/redcloth/blob/master/lib/redcloth/textile_doc.rb)
+        # (from https://github.com/jgarber/redcloth/blob/master/lib/redcloth/latex_doc.rb)
         attrs = ['filter_classes', 'filter_html', 'filter_ids', 'filter_styles',
                 'hard_breaks', 'lite_mode', 'no_span_caps', 'sanitize_html']
 

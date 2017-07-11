@@ -1,8 +1,8 @@
 ---
-title: My textile post
+title: My latex post
 ---
 
-h2. a post about textile
+h2. a post about latex
 
 p. line 1
 line 2

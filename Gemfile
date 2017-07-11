@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in jekyll-textile-converter.gemspec
+# Specify your gem's dependencies in jekyll-latex-converter.gemspec
 gemspec
 
 gem "clash", "~> 1.0"
