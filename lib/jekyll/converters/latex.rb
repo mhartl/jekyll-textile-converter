@@ -2,12 +2,13 @@ module Jekyll
   module Converters
     class Latex < Converter
       safe true
+      require 'polytexnic'
 
       highlighter_prefix '<nolatex>'
       highlighter_suffix '</nolatex>'
 
       DEFAULT_CONFIGURATION = {
-        'latex_ext' => 'latex',
+        'latex_ext' => 'tex',
         'redcloth' => {
           'hard_breaks' => true
         }
@@ -42,6 +43,7 @@ module Jekyll
 
       def convert(content)
         setup
+        return Polytexnic::Pipeline.new(content, article: true).to_html
 
         # Shortcut if config doesn't contain RedCloth section
         return RedCloth.new(content).to_html if @config['redcloth'].nil?

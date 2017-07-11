@@ -12,8 +12,10 @@ RSpec.describe(Jekyll::Filters) do
   end
 
   let(:filter) { JekyllFilter.new }
+  let(:latex)  { "something \\textbf{really} simple" }
+  let(:html)   { "<p>something <strong>really</strong> simple\n</p>" }
 
   it "should convert latex" do
-    expect(filter.textilize("something *really* simple")).to eq("<p>something <strong>really</strong> simple</p>")
+    expect(filter.latexify(latex)).to eq(html)
   end
 end
