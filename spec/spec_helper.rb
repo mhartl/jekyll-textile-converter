@@ -1,5 +1,5 @@
 require 'jekyll'
-require File.expand_path('../../lib/jekyll-latex-converter', __FILE__)
+require File.expand_path('../../lib/jekyll-latex', __FILE__)
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -1,5 +1,5 @@
 module Jekyll
-  module LatexConverter
+  module Latex
     VERSION = "0.1.0"
   end
 end

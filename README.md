@@ -1,4 +1,4 @@
-# Jekyll::Latex::Converter
+# Jekyll::Latex
 
 Use LaTeX with Jekyll.
 
@@ -9,7 +9,7 @@ Supports all LaTeX syntax supported by [PolyTeXnic](https://github.com/softcover
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jekyll-latex-converter'
+gem 'jekyll-latex'
 ```
 
 And then execute:
@@ -18,12 +18,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jekyll-latex-converter
+    $ gem install jekyll-latex
 
 Lastly, add it to your `_config.yml` file:
 
     gems:
-    - jekyll-latex-converter
+    - jekyll-latex
 
 ## Usage
 

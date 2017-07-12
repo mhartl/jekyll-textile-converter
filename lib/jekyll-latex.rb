@@ -1,6 +1,6 @@
 require 'jekyll'
 
-root = File.expand_path('jekyll-latex-converter', File.dirname(__FILE__))
+root = File.expand_path('jekyll-latex', File.dirname(__FILE__))
 require "#{root}/filters"
 require "#{root}/version"
 
