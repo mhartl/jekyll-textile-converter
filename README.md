@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Lastly, add it to your `_config.yml` file:
 
-    gems:
+    plugins:
     - jekyll-latex
 
 ## Usage
