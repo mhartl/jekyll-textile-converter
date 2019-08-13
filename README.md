@@ -20,9 +20,9 @@ Or install it yourself as:
 
     $ gem install jekyll-latex
 
-Lastly, add it to your `_config.yml` file:
+Lastly, add it to the plugins section of the `_config.yml` file:
 
-    gems:
+  plugins:
     - jekyll-latex
 
 ## Usage
