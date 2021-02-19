@@ -14,16 +14,22 @@ gem 'jekyll-latex'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jekyll-latex
+```
+$ gem install jekyll-latex
+```
 
 Lastly, add it to the plugins section of the `_config.yml` file:
 
-  plugins:
-    - jekyll-latex
+```
+plugins:
+  - jekyll-latex
+```
 
 ## Usage
 
@@ -39,6 +45,9 @@ categories: jekyll update
 published: true
 ---
 
+This is a \LaTeX\ file. 
 
-This is a \emph{LaTeX} file.
+\emph{This} is a \LaTeX\ file. 
+
+This \emph{is} a \LaTeX\ file.
 ```
