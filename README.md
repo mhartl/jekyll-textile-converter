@@ -78,7 +78,7 @@ To get mathematics to render, you should include [MathJax](https://www.mathjax.o
 </html>
 ```
 
-MathJax includes many options; here’s one configuration that I like that hides the “processing” message and supports dollar-sign style math input like `$x$` (note that this means you will have to escape out literal dollar signs with a leading backslash, as in `This costs \$20`):
+MathJax includes many options; here’s one configuration that I like that hides the “processing” message and supports dollar-sign-style math input like `$x$` (note that this means you will have to escape out literal dollar signs with a leading backslash, as in `This costs \$20`):
 
 ```html
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
